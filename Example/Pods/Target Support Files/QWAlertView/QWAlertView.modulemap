@@ -1,0 +1,6 @@
+framework module QWAlertView {
+  umbrella header "QWAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}
