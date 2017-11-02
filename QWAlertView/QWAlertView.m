@@ -14,6 +14,7 @@
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
 #define KEYWINDOW     [[UIApplication sharedApplication] keyWindow]
 #define ANIMATION_TIME 0.3
+#define QWPathResoce(name) [[[NSBundle mainBundle] pathForResource:@"QWAlertView.bundle" ofType:nil] stringByAppendingPathComponent:name]
 @interface QWAlertView ()
 ///遮罩层
 @property (nonatomic, strong) CALayer *maskLayer;
@@ -111,10 +112,17 @@
         [_control addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     }else{
         //添加按钮关闭
+        
+        NSBundle *bundle = [NSBundle bundleForClass:[QWAlertView class]];
+        NSURL *url = [bundle URLForResource:@"QWAlertView" withExtension:@"bundle"];
+        NSBundle *imageBundle = [NSBundle bundleWithURL:url];
+        
+        UIImage* closeImage = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:@"QWClose" ofType:@"png"]];
+        
         _closeBtn = [[UIButton alloc] init];
 //        _closeBtn.backgroundColor = [UIColor whiteColor];
 //        _closeBtn.layer.cornerRadius = 15.0;
-        [_closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+        [_closeBtn setImage:closeImage forState:UIControlStateNormal];
         [_closeBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
          _closeBtn.frame = CGRectMake(_contentView.frame.size.width - 30, 0, 30, 30);
         [_contentView addSubview:_closeBtn];

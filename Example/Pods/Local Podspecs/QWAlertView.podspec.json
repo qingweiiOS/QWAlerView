@@ -1,22 +1,23 @@
 {
   "name": "QWAlertView",
   "version": "0.1.0",
-  "summary": "A short description of QWAlertView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/772053795@qq.com/QWAlertView",
+  "summary": "一个封装的弹窗",
+  "description": "简单的一个弹窗 只负责弹出和移除 5种弹出方式 内容自己定",
+  "homepage": "https://github.com/qingweiiOS/QWAlerView.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "772053795@qq.com": "772053795@qq.com"
+    "qingweiiOS": "772053795@qq.com"
   },
   "source": {
-    "git": "https://github.com/772053795@qq.com/QWAlertView.git",
+    "git": "https://github.com/qingweiiOS/QWAlerView.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "QWAlertView/Classes/**/*"
+  "source_files": "QWAlertView/*.{h,m}",
+  "resources": "QWAlertView/QWAlertView.bundle"
 }
