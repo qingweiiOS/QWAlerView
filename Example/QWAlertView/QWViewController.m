@@ -7,7 +7,6 @@
 //
 
 #import "QWViewController.h"
-#import <QWAlertView/QWAlertView.h>
 
 @interface QWViewController ()
 
@@ -18,15 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+	// Do any additional setup after loading the view, typically from a nib.
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    UIView *temPViews = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 150)];
-    temPViews.backgroundColor = [UIColor redColor];
-    [[QWAlertView sharedMask] show:temPViews withType:QWAlertViewStyleAlert];
-    [[QWAlertView sharedMask] setCloseImage:[UIImage imageNamed:@"inviteClose"]];
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
