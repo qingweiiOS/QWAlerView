@@ -39,6 +39,32 @@
     });
     return alertView;
 }
+
+- (UIControl *)control{
+    
+    if(!_control){
+        
+        _control = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        
+        [_control addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+        _control.enabled = NO;
+    }
+    return _control;
+}
+- (UIButton *)closeBtn{
+    
+    if(!_closeBtn){
+        //添加按钮关闭
+        _closeBtn = [[UIButton alloc] init];
+        //        _closeBtn.backgroundColor = [UIColor whiteColor];
+        //        _closeBtn.layer.cornerRadius = 15.0;
+        [_closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+        [_closeBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+        _closeBtn.frame = CGRectMake(_contentView.frame.size.width - 30, 0, 30, 30);
+        [_contentView addSubview:_closeBtn];
+    }
+    return _closeBtn;
+}
 - (void)show:(UIView *)contentView withType:(QWAlertViewStyle)style{
     //判断是否赋于大小
     CGFloat contentViewHeight =  contentView.frame.size.height;
@@ -56,26 +82,26 @@
         // 根据弹出模式 添加动画
         switch (_alertStyle) {
             case QWAlertViewStyleAlert:
-                 _starTransForm = CGAffineTransformMakeScale(0.01, 0.01);
+                _starTransForm = CGAffineTransformMakeScale(0.01, 0.01);
                 break;
             case QWAlertViewStyleActiAlertLeft:
                 _starTransForm = CGAffineTransformMakeTranslation(-SCREEN_W, 0);
                 break;
             case QWAlertViewStyleActiAlertRight:
-               _starTransForm = CGAffineTransformMakeTranslation(SCREEN_W, 0);
+                _starTransForm = CGAffineTransformMakeTranslation(SCREEN_W, 0);
                 break;
             case QWAlertViewStyleActionSheetTop:
-                 _contentView.frame = CGRectMake(_contentView.frame.origin.x, 0, _contentView.frame.size.width, _contentView.frame.size.height);
-                 _starTransForm = CGAffineTransformMakeTranslation(0, -_contentView.frame.size.height);
+                _contentView.frame = CGRectMake(_contentView.frame.origin.x, 0, _contentView.frame.size.width, _contentView.frame.size.height);
+                _starTransForm = CGAffineTransformMakeTranslation(0, -_contentView.frame.size.height);
                 break;
             case QWAlertViewStyleActionSheetDown:
-                  _contentView.frame = CGRectMake(_contentView.frame.origin.x, SCREEN_H - _contentView.frame.size.height, _contentView.frame.size.width, _contentView.frame.size.height);
-                  _starTransForm = CGAffineTransformMakeTranslation(0, SCREEN_H);
+                _contentView.frame = CGRectMake(_contentView.frame.origin.x, SCREEN_H - _contentView.frame.size.height, _contentView.frame.size.width, _contentView.frame.size.height);
+                _starTransForm = CGAffineTransformMakeTranslation(0, SCREEN_H);
                 break;
             default:
                 break;
         }
-           [self alertAnimatedPrensent];
+        [self alertAnimatedPrensent];
         
     }else {
         
@@ -100,25 +126,12 @@
 
 ///添加遮罩
 - (void)addMaskLayer{
-     _maskLayer = [CALayer layer];
+    _maskLayer = [CALayer layer];
     [_maskLayer setFrame:[[UIScreen mainScreen] bounds]];
     [_maskLayer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.30].CGColor];
     [[KEYWINDOW layer] addSublayer:_maskLayer];
-    _control = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //判断关闭方式
-    if (_alertStyle == QWAlertViewStyleActionSheetDown||_alertStyle == QWAlertViewStyleActionSheetTop)
-    {
-        [_control addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
-    }else{
-        //添加按钮关闭
-        _closeBtn = [[UIButton alloc] init];
-//        _closeBtn.backgroundColor = [UIColor whiteColor];
-//        _closeBtn.layer.cornerRadius = 15.0;
-        [_closeBtn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-        [_closeBtn addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
-         _closeBtn.frame = CGRectMake(_contentView.frame.size.width - 30, 0, 30, 30);
-        [_contentView addSubview:_closeBtn];
-    }
+    [self setCloseStyle:_closeStyle];
     [KEYWINDOW addSubview:_control];
     
 }
@@ -126,8 +139,8 @@
 //关闭 自带事件 由用户自己写事件关闭弹窗
 - (void)setOn:(BOOL)on{
     _on = on;
-    _control.userInteractionEnabled= _on;
-    _closeBtn.hidden = YES;
+    _control.enabled = _on;
+    _closeBtn.hidden = !_on;
 }
 - (void)setCloseImage:(UIImage *)closeImage{
     
@@ -135,7 +148,15 @@
 }
 - (void)setCloseStyle:(CloseStyle)closeStyle{
     _closeStyle = closeStyle;
-    
+    //判断关闭方式
+    if (_closeStyle == CloseStyleTapClose)
+    {
+        self.control.enabled = YES;
+        self.closeBtn.hidden = YES;
+    }else{
+        self.control.enabled = NO;
+        self.closeBtn.hidden = NO;
+    }
     
 }
 - (void)dismiss{
@@ -151,9 +172,9 @@
     }
     //移除弹出框
     [self alertAnimatedOut];
-     //回调动画完成回调
+    //回调动画完成回调
     if (_dismissBlock) {
-       
+        
         _dismissBlock();
     }
     
@@ -172,7 +193,7 @@
         }
         
     }];
-//    [self addCoreAnimation];
+    //    [self addCoreAnimation];
 }
 - (void)addCoreAnimation{
     
@@ -185,9 +206,9 @@
 - (void)alertAnimatedOut{
     [UIView animateWithDuration:ANIMATION_TIME animations:^{
         _contentView.transform = _starTransForm;
-         KEYWINDOW.userInteractionEnabled = NO;
+        KEYWINDOW.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
-         KEYWINDOW.userInteractionEnabled = YES;
+        KEYWINDOW.userInteractionEnabled = YES;
         [_contentView removeFromSuperview];
         _contentView = nil;
     }];

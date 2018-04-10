@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32F00A66F22509A2C73C0A04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		32F00A66F22509A2C73C0A04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5219F9BF77436C30DFC4A2DE /* Pods_QWAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QWAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* QWAlertView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QWAlertView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,8 +65,8 @@
 		A46E390E73CC1710F8A4AA24 /* Pods-QWAlertView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QWAlertView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-QWAlertView_Example/Pods-QWAlertView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D3235BF23C075C3161E53ABB /* Pods-QWAlertView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QWAlertView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QWAlertView_Tests/Pods-QWAlertView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6969DE937A42FFEC6609219 /* Pods_QWAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QWAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF45A748C283113CACF6A104 /* QWAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = QWAlertView.podspec; path = ../QWAlertView.podspec; sourceTree = "<group>"; };
-		E4D350348C15A22BB449BE15 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF45A748C283113CACF6A104 /* QWAlertView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QWAlertView.podspec; path = ../QWAlertView.podspec; sourceTree = "<group>"; };
+		E4D350348C15A22BB449BE15 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "772053795@qq.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = U2Q8AKAV4B;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -536,12 +539,14 @@
 			baseConfigurationReference = 8BD3038A1C9ED1364B411B7A /* Pods-QWAlertView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2Q8AKAV4B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QWAlertView/QWAlertView-Prefix.pch";
 				INFOPLIST_FILE = "QWAlertView/QWAlertView-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,12 +556,14 @@
 			baseConfigurationReference = A46E390E73CC1710F8A4AA24 /* Pods-QWAlertView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2Q8AKAV4B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QWAlertView/QWAlertView-Prefix.pch";
 				INFOPLIST_FILE = "QWAlertView/QWAlertView-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
