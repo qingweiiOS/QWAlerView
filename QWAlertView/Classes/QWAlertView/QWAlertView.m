@@ -13,7 +13,7 @@
 ///屏幕高度
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
 #define KEYWINDOW     [[UIApplication sharedApplication] keyWindow]
-#define ANIMATION_TIME 0.3
+#define ANIMATION_TIME 0.5
 @interface QWAlertView ()
 ///遮罩层
 @property (nonatomic, strong) CALayer *maskLayer;
@@ -91,11 +91,11 @@
                 _starTransForm = CGAffineTransformMakeTranslation(SCREEN_W, 0);
                 break;
             case QWAlertViewStyleActionSheetTop:
-                _contentView.frame = CGRectMake(_contentView.frame.origin.x, 0, _contentView.frame.size.width, _contentView.frame.size.height);
+              
                 _starTransForm = CGAffineTransformMakeTranslation(0, -_contentView.frame.size.height);
                 break;
             case QWAlertViewStyleActionSheetDown:
-                _contentView.frame = CGRectMake(_contentView.frame.origin.x, SCREEN_H - _contentView.frame.size.height, _contentView.frame.size.width, _contentView.frame.size.height);
+             
                 _starTransForm = CGAffineTransformMakeTranslation(0, SCREEN_H);
                 break;
             default:
@@ -182,15 +182,18 @@
 - (void)alertAnimatedPrensent{
     _contentView.transform = _starTransForm;
     [KEYWINDOW addSubview:_contentView];
-    [UIView animateWithDuration:ANIMATION_TIME animations:^{
+    [UIView animateWithDuration:ANIMATION_TIME delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         _contentView.transform = CGAffineTransformIdentity;
         KEYWINDOW.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
         KEYWINDOW.userInteractionEnabled = YES;
+        
+
         if (_showBlock) {
             //动画完成后回调
             _showBlock();
         }
+        
         
     }];
     //    [self addCoreAnimation];

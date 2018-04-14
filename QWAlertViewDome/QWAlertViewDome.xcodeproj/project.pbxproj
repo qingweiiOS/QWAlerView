@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D92ACD22081F8F9002F3634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D92ACD12081F8F9002F3634 /* AppDelegate.m */; };
+		4D92ACD52081F8F9002F3634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D92ACD42081F8F9002F3634 /* ViewController.m */; };
+		4D92ACD82081F8F9002F3634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D92ACD62081F8F9002F3634 /* Main.storyboard */; };
+		4D92ACDA2081F8F9002F3634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D92ACD92081F8F9002F3634 /* Assets.xcassets */; };
+		4D92ACDD2081F8F9002F3634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D92ACDB2081F8F9002F3634 /* LaunchScreen.storyboard */; };
+		4D92ACE02081F8F9002F3634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D92ACDF2081F8F9002F3634 /* main.m */; };
+		4D92ACE92081F90C002F3634 /* QWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D92ACE82081F90C002F3634 /* QWAlertView.m */; };
+		4D92ACEE2081F942002F3634 /* MDCancelTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D92ACEB2081F942002F3634 /* MDCancelTaskView.xib */; };
+		4D92ACEF2081F943002F3634 /* MDCancelTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D92ACED2081F942002F3634 /* MDCancelTaskView.m */; };
+		4D92ACF32081F9EB002F3634 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D92ACF22081F9EB002F3634 /* test.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4D92ACCD2081F8F9002F3634 /* QWAlertViewDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QWAlertViewDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D92ACD02081F8F9002F3634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D92ACD12081F8F9002F3634 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D92ACD32081F8F9002F3634 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D92ACD42081F8F9002F3634 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D92ACD72081F8F9002F3634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D92ACD92081F8F9002F3634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D92ACDC2081F8F9002F3634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D92ACDE2081F8F9002F3634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D92ACDF2081F8F9002F3634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D92ACE72081F90C002F3634 /* QWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWAlertView.h; sourceTree = "<group>"; };
+		4D92ACE82081F90C002F3634 /* QWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QWAlertView.m; sourceTree = "<group>"; };
+		4D92ACEB2081F942002F3634 /* MDCancelTaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDCancelTaskView.xib; sourceTree = "<group>"; };
+		4D92ACEC2081F942002F3634 /* MDCancelTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCancelTaskView.h; sourceTree = "<group>"; };
+		4D92ACED2081F942002F3634 /* MDCancelTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCancelTaskView.m; sourceTree = "<group>"; };
+		4D92ACF22081F9EB002F3634 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D92ACCA2081F8F9002F3634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D92ACC42081F8F9002F3634 = {
+			isa = PBXGroup;
+			children = (
+				4D92ACCF2081F8F9002F3634 /* QWAlertViewDome */,
+				4D92ACCE2081F8F9002F3634 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D92ACCE2081F8F9002F3634 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D92ACCD2081F8F9002F3634 /* QWAlertViewDome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D92ACCF2081F8F9002F3634 /* QWAlertViewDome */ = {
+			isa = PBXGroup;
+			children = (
+				4D92ACEA2081F937002F3634 /* ShowView */,
+				4D92ACE62081F90C002F3634 /* QWAlertView */,
+				4D92ACD02081F8F9002F3634 /* AppDelegate.h */,
+				4D92ACD12081F8F9002F3634 /* AppDelegate.m */,
+				4D92ACD32081F8F9002F3634 /* ViewController.h */,
+				4D92ACD42081F8F9002F3634 /* ViewController.m */,
+				4D92ACD62081F8F9002F3634 /* Main.storyboard */,
+				4D92ACD92081F8F9002F3634 /* Assets.xcassets */,
+				4D92ACDB2081F8F9002F3634 /* LaunchScreen.storyboard */,
+				4D92ACDE2081F8F9002F3634 /* Info.plist */,
+				4D92ACDF2081F8F9002F3634 /* main.m */,
+			);
+			path = QWAlertViewDome;
+			sourceTree = "<group>";
+		};
+		4D92ACE62081F90C002F3634 /* QWAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4D92ACE72081F90C002F3634 /* QWAlertView.h */,
+				4D92ACE82081F90C002F3634 /* QWAlertView.m */,
+			);
+			name = QWAlertView;
+			path = ../../QWAlertView/Classes/QWAlertView;
+			sourceTree = "<group>";
+		};
+		4D92ACEA2081F937002F3634 /* ShowView */ = {
+			isa = PBXGroup;
+			children = (
+				4D92ACF22081F9EB002F3634 /* test.png */,
+				4D92ACEC2081F942002F3634 /* MDCancelTaskView.h */,
+				4D92ACED2081F942002F3634 /* MDCancelTaskView.m */,
+				4D92ACEB2081F942002F3634 /* MDCancelTaskView.xib */,
+			);
+			path = ShowView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D92ACCC2081F8F9002F3634 /* QWAlertViewDome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D92ACE32081F8F9002F3634 /* Build configuration list for PBXNativeTarget "QWAlertViewDome" */;
+			buildPhases = (
+				4D92ACC92081F8F9002F3634 /* Sources */,
+				4D92ACCA2081F8F9002F3634 /* Frameworks */,
+				4D92ACCB2081F8F9002F3634 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QWAlertViewDome;
+			productName = QWAlertViewDome;
+			productReference = 4D92ACCD2081F8F9002F3634 /* QWAlertViewDome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D92ACC52081F8F9002F3634 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "卿伟";
+				TargetAttributes = {
+					4D92ACCC2081F8F9002F3634 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4D92ACC82081F8F9002F3634 /* Build configuration list for PBXProject "QWAlertViewDome" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D92ACC42081F8F9002F3634;
+			productRefGroup = 4D92ACCE2081F8F9002F3634 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D92ACCC2081F8F9002F3634 /* QWAlertViewDome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D92ACCB2081F8F9002F3634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D92ACF32081F9EB002F3634 /* test.png in Resources */,
+				4D92ACDD2081F8F9002F3634 /* LaunchScreen.storyboard in Resources */,
+				4D92ACDA2081F8F9002F3634 /* Assets.xcassets in Resources */,
+				4D92ACEE2081F942002F3634 /* MDCancelTaskView.xib in Resources */,
+				4D92ACD82081F8F9002F3634 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D92ACC92081F8F9002F3634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D92ACD52081F8F9002F3634 /* ViewController.m in Sources */,
+				4D92ACE02081F8F9002F3634 /* main.m in Sources */,
+				4D92ACEF2081F943002F3634 /* MDCancelTaskView.m in Sources */,
+				4D92ACD22081F8F9002F3634 /* AppDelegate.m in Sources */,
+				4D92ACE92081F90C002F3634 /* QWAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D92ACD62081F8F9002F3634 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D92ACD72081F8F9002F3634 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D92ACDB2081F8F9002F3634 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D92ACDC2081F8F9002F3634 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D92ACE12081F8F9002F3634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D92ACE22081F8F9002F3634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D92ACE42081F8F9002F3634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2Q8AKAV4B;
+				INFOPLIST_FILE = QWAlertViewDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taodaren.QWAlertViewDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D92ACE52081F8F9002F3634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2Q8AKAV4B;
+				INFOPLIST_FILE = QWAlertViewDome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taodaren.QWAlertViewDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D92ACC82081F8F9002F3634 /* Build configuration list for PBXProject "QWAlertViewDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D92ACE12081F8F9002F3634 /* Debug */,
+				4D92ACE22081F8F9002F3634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D92ACE32081F8F9002F3634 /* Build configuration list for PBXNativeTarget "QWAlertViewDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D92ACE42081F8F9002F3634 /* Debug */,
+				4D92ACE52081F8F9002F3634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D92ACC52081F8F9002F3634 /* Project object */;
+}
