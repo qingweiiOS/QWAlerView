@@ -187,16 +187,11 @@
         KEYWINDOW.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
         KEYWINDOW.userInteractionEnabled = YES;
-        
-
         if (_showBlock) {
             //动画完成后回调
             _showBlock();
         }
-        
-        
     }];
-    //    [self addCoreAnimation];
 }
 - (void)addCoreAnimation{
     
