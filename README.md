@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 [![Platform](https://img.shields.io/cocoapods/p/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 
+
+180646qm8ybtxt488lplbt.gif
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
