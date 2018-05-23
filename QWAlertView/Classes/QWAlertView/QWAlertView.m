@@ -16,7 +16,7 @@
 #define ANIMATION_TIME 0.5
 @interface QWAlertView ()
 ///遮罩层
-@property (nonatomic, strong) CALayer *maskLayer;
+@property (nonatomic, strong) UIView *maskLayer;
 //响应事件的控件
 @property (nonatomic, strong) UIControl *control;
 //保存弹出视图
@@ -126,10 +126,10 @@
 
 ///添加遮罩
 - (void)addMaskLayer{
-    _maskLayer = [CALayer layer];
+    _maskLayer = [UIView new];
     [_maskLayer setFrame:[[UIScreen mainScreen] bounds]];
-    [_maskLayer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.30].CGColor];
-    [[KEYWINDOW layer] addSublayer:_maskLayer];
+    [_maskLayer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.30]];
+    [KEYWINDOW  addSubview:_maskLayer];
     //判断关闭方式
     [self setCloseStyle:_closeStyle];
     [KEYWINDOW addSubview:_control];
@@ -163,7 +163,7 @@
     //设置初始值
     // 移除遮罩
     if (_maskLayer) {
-        [_maskLayer removeFromSuperlayer];
+        [_maskLayer removeFromSuperview];
         [_control removeFromSuperview];
         [_closeBtn removeFromSuperview];
         _maskLayer = nil;
