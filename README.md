@@ -1,10 +1,12 @@
 # QWAlertView
-
+# 当前版本 0.2.2
 [![CI Status](http://img.shields.io/travis/772053795@qq.com/QWAlertView.svg?style=flat)](https://travis-ci.org/772053795@qq.com/QWAlertView)
 [![Version](https://img.shields.io/cocoapods/v/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 [![License](https://img.shields.io/cocoapods/l/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 [![Platform](https://img.shields.io/cocoapods/p/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 
+
+180646qm8ybtxt488lplbt.gif
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -27,3 +29,5 @@ pod 'QWAlertView'
 ## License
 
 QWAlertView is available under the MIT license. See the LICENSE file for more info.
+
+
