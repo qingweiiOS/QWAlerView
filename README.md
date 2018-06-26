@@ -3,11 +3,11 @@
 
 `pod 'QWAlertView'`
 
-###效果图
+### 效果图
 
 ![](https://github.com/qingweiiOS/QWAlerView/blob/master/180646qm8ybtxt488lplbt.gif)
 
-###代码
+### 代码
 
 ```ruby
 [[QWAlertView sharedMask] show:自定义视图 withType:(QWAlertViewStyle)（弹出方向）];
