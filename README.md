@@ -1,36 +1,16 @@
 # QWAlertView
 # 当前版本 0.2.2
-[![CI Status](http://img.shields.io/travis/772053795@qq.com/QWAlertView.svg?style=flat)](https://travis-ci.org/772053795@qq.com/QWAlertView)
-[![Version](https://img.shields.io/cocoapods/v/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
-[![License](https://img.shields.io/cocoapods/l/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
-[![Platform](https://img.shields.io/cocoapods/p/QWAlertView.svg?style=flat)](http://cocoapods.org/pods/QWAlertView)
 
+`pod 'QWAlertView'`
 
-180646qm8ybtxt488lplbt.gif
-## Example
+### 效果图
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![](https://github.com/qingweiiOS/QWAlerView/blob/master/180646qm8ybtxt488lplbt.gif)
 
-## Requirements
-
-## Installation
-
-QWAlertView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### 代码
 
 ```ruby
-pod 'QWAlertView'
-```
-
-## Author
-
-772053795@qq.com, 772053795@qq.com
-
-
-![示例](https://github.com/qingweiiOS/QWAlerView/blob/master/180646qm8ybtxt488lplbt.gif)
-## CODE
 [[QWAlertView sharedMask] show:自定义视图 withType:(QWAlertViewStyle)（弹出方向）];
-
 ///弹出动画完成后的 回调
 @property (nonatomic, copy) showBlock showBlock;
 ///关闭回调
@@ -59,9 +39,8 @@ pod 'QWAlertView'
 */
 - (void)show:(UIView *)contentView withType:(QWAlertViewStyle)style animationFinish:(showBlock)show dismissHandle:(dismissBlock)dismiss;
 /**  移除弹出视图 */
-
 - (void)dismiss;
-
+```
 
 ## License
 
