@@ -14,6 +14,7 @@
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
 #define KEYWINDOW     [[UIApplication sharedApplication] keyWindow]
 #define ANIMATION_TIME 0.5
+#define QWWEAKSELF __weak typeof(self) weakSelf = self;
 @interface QWAlertView ()
 ///遮罩层
 @property (nonatomic, strong) UIView *maskLayer;
@@ -91,11 +92,11 @@
                 _starTransForm = CGAffineTransformMakeTranslation(SCREEN_W, 0);
                 break;
             case QWAlertViewStyleActionSheetTop:
-              
+                
                 _starTransForm = CGAffineTransformMakeTranslation(0, -_contentView.frame.size.height);
                 break;
             case QWAlertViewStyleActionSheetDown:
-             
+                
                 _starTransForm = CGAffineTransformMakeTranslation(0, SCREEN_H);
                 break;
             default:
@@ -133,9 +134,9 @@
     //判断关闭方式
     [self setCloseStyle:_closeStyle];
     [KEYWINDOW addSubview:_control];
-    
+    /// 默认关闭
+    self.on = NO;
 }
-
 //关闭 自带事件 由用户自己写事件关闭弹窗
 - (void)setOn:(BOOL)on{
     _on = on;
@@ -182,14 +183,15 @@
 - (void)alertAnimatedPrensent{
     _contentView.transform = _starTransForm;
     [KEYWINDOW addSubview:_contentView];
+    QWWEAKSELF
     [UIView animateWithDuration:ANIMATION_TIME delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        _contentView.transform = CGAffineTransformIdentity;
+        weakSelf.contentView.transform = CGAffineTransformIdentity;
         KEYWINDOW.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
         KEYWINDOW.userInteractionEnabled = YES;
-        if (_showBlock) {
+        if (weakSelf.showBlock) {
             //动画完成后回调
-            _showBlock();
+            weakSelf.showBlock();
         }
     }];
 }
@@ -202,13 +204,14 @@
     
 }
 - (void)alertAnimatedOut{
+    QWWEAKSELF
     [UIView animateWithDuration:ANIMATION_TIME animations:^{
-        _contentView.transform = _starTransForm;
+        weakSelf.contentView.transform = weakSelf.starTransForm;
         KEYWINDOW.userInteractionEnabled = NO;
     } completion:^(BOOL finished) {
         KEYWINDOW.userInteractionEnabled = YES;
-        [_contentView removeFromSuperview];
-        _contentView = nil;
+        [weakSelf.contentView removeFromSuperview];
+        weakSelf.contentView = nil;
     }];
     
 }
