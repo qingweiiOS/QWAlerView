@@ -1,5 +1,5 @@
 # QWAlertView
-# 当前版本 0.2.3
+# 当前版本 0.3.0
 
 `pod 'QWAlertView'`
 
@@ -15,12 +15,11 @@
 @property (nonatomic, copy) showBlock showBlock;
 ///关闭回调
 @property (nonatomic, copy) dismissBlock dismissBlock;
-///关闭模式
-@property (nonatomic, assign) CloseStyle closeStyle;
-/// 开启或关闭 自带的 移除弹窗事件 如果关闭需要自己调用 dismiss
-@property (nonatomic, assign) BOOL on;
-/// 关闭按钮 图片 30*30
-@property (nonatomic, strong) UIImage *closeImage;
+///触摸任意位置关闭弹窗 默认NO
+@property (nonatomic, assign) BOOL touchOff;
+///当前是否正在展示弹窗
+@property (nonatomic, assign,readonly) BOOL isShow;
+
 /**  创建弹出试图 */
 + (QWAlertView *)sharedMask;
 /**
