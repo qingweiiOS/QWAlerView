@@ -12,22 +12,17 @@ typedef enum{
     ///默认 从窗口正中 弹出
     QWAlertViewStyleAlert = 0,
     ///下
-    QWAlertViewStyleActionSheetDown,
+    QWAlertViewStyleAlertDown,
     ///上
-    QWAlertViewStyleActionSheetTop,
+    QWAlertViewStyleAlertTop,
     ///左
-    QWAlertViewStyleActiAlertLeft,
-    ///右边
-    QWAlertViewStyleActiAlertRight,
+    QWAlertViewStyleAlertLeft,
+    ///右
+    QWAlertViewStyleAlertRight,
+    ///无动画效果
+    QWAlertViewStyleNone,
     
 }QWAlertViewStyle;
-///关闭模式
-typedef enum{
-    ///触摸整个窗口 关闭 【默认】
-    CloseStyleTapClose = 0,
-    /// 点击关闭按钮关闭  自带【右上角 需要自己设置图片】
-    CloseStyleButtonClose,
-}CloseStyle;
 typedef void(^showBlock)(void);;
 typedef void(^dismissBlock)(void);
 @interface QWAlertView : NSObject
@@ -35,12 +30,12 @@ typedef void(^dismissBlock)(void);
 @property (nonatomic, copy) showBlock showBlock;
 ///关闭回调
 @property (nonatomic, copy) dismissBlock dismissBlock;
-///关闭模式
-@property (nonatomic, assign) CloseStyle closeStyle;
-/// 当关闭模式为CloseStyleTapClose时 开启或关闭 自带的 移除弹窗事件 默认关闭
-@property (nonatomic, assign) BOOL on;
-/// 关闭按钮 图片 30*30
-@property (nonatomic, strong) UIImage *closeImage;
+///触摸任意位置关闭弹窗 默认NO
+@property (nonatomic, assign) BOOL touchOff;
+
+///当前是否正在展示弹窗
+@property (nonatomic, assign,readonly) BOOL isShow;
+
 /**  创建弹出试图 */
 + (QWAlertView *)sharedMask;
 /**

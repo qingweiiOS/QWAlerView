@@ -36,6 +36,9 @@
 - (IBAction)action_showView:(UIButton *)sender {
     NSLog(@"%lu",sender.tag);
     [[QWAlertView sharedMask] show:self.cancelTaskView withType:(QWAlertViewStyle)sender.tag];
+    [QWAlertView sharedMask].touchOff = NO;
+    
+    [[QWAlertView sharedMask] show:self.cancelTaskView withType:(QWAlertViewStyle)sender.tag-1];
 
 }
 
